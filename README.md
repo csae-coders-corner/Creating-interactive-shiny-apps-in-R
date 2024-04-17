@@ -48,7 +48,7 @@ tabPanel("Another Tab",
 
 The second component (i.e. the server ) draws the dynamic items from user inputs. This section is a little more heavy on the R code. We take bins from the user input and define some plot object distPlot to pass back to the UI.
 
-# Define server logic required to draw a histogram
+#Define server logic required to draw a histogram
 server <- function(input, output) {
    
    output$distPlot <- renderPlot({
@@ -68,7 +68,7 @@ server <- function(input, output) {
 
 Finally, we can run the application by combining the front end and back end together.
 
-# Run the application 
+#Run the application 
 shinyApp(ui = ui, server = server)
 
 The finished app looks like this:
