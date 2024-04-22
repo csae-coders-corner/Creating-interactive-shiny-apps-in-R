@@ -1,3 +1,5 @@
+![CC Graphics 2024_Interactiveshinyapps](https://github.com/csae-coders-corner/Creating-interactive-shiny-apps-in-R/assets/148211163/00755766-22ee-47ba-b896-65ed35508f10)
+
 # Creating-interactive-shiny-apps-in-R
 
 R [Shiny Apps](https://shiny.rstudio.com/?version=1.1.456&mode=desktop) allow authors to write small self contained applications to better display results/data in an interactive manner or to allow skeptical readers to perform live robustness tests. 
