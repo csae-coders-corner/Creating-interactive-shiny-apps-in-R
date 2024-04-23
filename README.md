@@ -10,14 +10,12 @@ Here is an [example of what a finished App could look like](https://bdi-pathogen
 
 I will use the default Shiny App example to illustrate its features. You can follow along by simply selecting File - New File - Shiny Web App in R-studio. First, we will load the library.
 
-l i b r a r y ( s hi n y )
+`library (shiny)`
 
 Every Shiny App has three components- the UI (user interface), the server, and the one that calls the application. The UI determines the front end of your app i.e. how it looks and feels to the user. In this case, it’ll contain two tabs- one that displays a histogram, and the other that will just contain a piece of text.
 
-#Define UI for application that draws a histogram and another which  
-#has some simple text. In the first tab, I include a sidebar with a slider 
-#allowing the user to change the number of bins in a histogram and then 
-#plot the histogram next to it. 
+```
+#Define UI for application that draws a histogram and another which has some simple text. In the first tab, I include a sidebar with a slider allowing the user to change the number of bins in a histogram and then plot the histogram next to it. 
 
 ui <- fluidPage(
     tabsetPanel(
@@ -47,9 +45,11 @@ tabPanel("Another Tab",
   ) # end "About" tab
   ) # end tabsetPanel
 )
+```
 
 The second component (i.e. the server ) draws the dynamic items from user inputs. This section is a little more heavy on the R code. We take bins from the user input and define some plot object distPlot to pass back to the UI.
 
+```
 #Define server logic required to draw a histogram
 server <- function(input, output) {
    
@@ -67,11 +67,14 @@ server <- function(input, output) {
         "This is another tab, SO exciting!"
     })
 }
+```
 
 Finally, we can run the application by combining the front end and back end together.
 
-#Run the application 
+```
+# Run the application 
 shinyApp(ui = ui, server = server)
+```
 
 The finished app looks like this:
                     
